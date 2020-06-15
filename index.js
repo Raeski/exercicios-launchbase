@@ -1,40 +1,64 @@
-// //Criando as vaŕiaveis para calcuar o IMC
-// const nome = 'Gustavo';
-// const peso = 84;
-// const altura = 1.85;
+// Criar um programa que calcula a média
+// das turmar de alunos e envia
+//mensagem do cálculo da média
 
-// // Calculando o imc
-// const imc  = peso / (altura * altura);
-// console.log(imc);
-// //Conferindo se está acima do peso ou não
-// if( imc >= 30){
-//     console.log(`${nome} você está acima do peso`)
-// } else {
-//     console.log(`${nome} você não está acima do peso`)
-// }
+const alunosDaTurmaA = [
+    {
+        nome:'Gustavo',
+        nota:10.0
+    },
+    {
+        nome:'Marta',
+        nota:8.0
+    },
+    {
+        nome:'Helena',
+        nota:10.0
+    },
+    {
+        nome: 'Aluno novo',
+        nota: 7.0
+    }
+]
+const alunosDaTurmaB = [
+    {
+        nome:'Elton',
+        nota:1.0
+    },
+    {
+        nome:'Fabio',
+        nota:8.0
+    },
+    {
+        nome:'Beatriz',
+        nota:8.0
+    },
+    {
+        nome: 'Aluno novo',
+        nota: 7.0
+    }
+]
+function calculaMedia (alunos){
+    let soma = 0;
+    for(let i = 0; i < alunos.length; i++){
+        soma = soma + alunos[i].nota
+    }
+    const media = soma / alunos.length
+    return media
+}
+
+const media1 = calculaMedia(alunosDaTurmaA)
+const media2 = calculaMedia(alunosDaTurmaB)
 
 
-
-
-const nome = 'Gustavo'
-const sexo = 'F'
-const idade = 20;
-const contribuicao = 3;
-const soma = idade + contribuicao
-
-// Conferir se está apto para se aposentar
-if (sexo === 'M'){
-    if(contribuicao >= 35 || soma >= 95 ){
-        console.log(` ${nome} Você está apto para se aposentar`)
+function enviaMensagem(media, turma){
+    //Se a média for maior que 5, parabenizar a turma
+    if(media > 5){
+        console.log(`A media da turma ${turma} foi de ${media1}. Parabéns`)
     } else {
-        console.log("Você não está apto para se aposentar")
+        console.log(`A media da turma ${turma} é menor que 5`)
     }
 }
-if (sexo === 'F'){
-    if(contribuicao >= 30 || soma >= 85 ){
-        console.log(` ${nome} Você está apto para se aposentar`)
-    } else {
-        console.log("Você não está apto para se aposentar")
-    }
-}
 
+enviaMensagem(media1, 'turma A')
+enviaMensagem(media2, 'turma B')
