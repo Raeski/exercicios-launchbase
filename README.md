@@ -37,5 +37,6 @@
 
 >	Realizar o download do projeto e com todos os arquivos na mesma pasta, executar o index.html em um navegador.
 
-<br/>
+---
+
 <p>Feito por <b>Gustavo Raeski</b>  :octocat: | <a href="https://www.linkedin.com/in/gustavo-raeski/">Entre em contato</a></p>
