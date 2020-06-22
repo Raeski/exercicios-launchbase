@@ -16,6 +16,9 @@
               <h1>Cursos RocketSeat</h1>
             </div>
         </header>
+
+{%block content %}
+{%endblock%}
         <section>
             <div class="container">
                 {% for item in items %}
@@ -25,7 +28,7 @@
                         <h2>{{item.price}}</h2>
                     <a href="https://rocketseat.com.br/{{item.id}}" target="_blank"><p>{{item.acess}}</p></a>              
                 </div>
-                {% endfor %}}
+                {% endfor %}
             </div>
         </section>
         <div class="modal-overlay">
@@ -38,6 +41,7 @@
                 </div>
             </div>
         </div>
+
         <script src="scripts.js"></script>
     </body>
 </html>
